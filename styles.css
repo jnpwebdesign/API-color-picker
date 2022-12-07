@@ -13,11 +13,18 @@ html, body {
 /*------------header---------*/
 
 form {
-    display: flex;
-    flex-direction: column;
-    margin: 2rem .5rem;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:    "input input input input"
+                            "select select select select"
+                            "button button button button"
+                            "hex-value hex-value hex-value hex-value";
     align-items: center;
+    justify-items: center;
+    margin: 2rem .5rem;
+
+
 }
 
 input, select, button {
@@ -29,6 +36,7 @@ input, select, button {
 
 input {
     height: 100px;
+    grid-area: input;
 }
 
 input:hover, select:hover, button:hover {
@@ -39,12 +47,14 @@ input:hover, select:hover, button:hover {
 #hex-value {
     font-size: 1.3rem;
     margin: 0;
+    grid-area: hex-value;
 }
 
 select {
     height: 50px;
     padding: 10px;
     font-size: 1rem;
+    grid-area: select;
 }
 
 #mode-btn {
@@ -54,6 +64,7 @@ select {
     font-size: 1rem;
     cursor: pointer;
     font-weight: bold;
+    grid-area: button;
 }
 
 #mode-btn:hover {
@@ -94,26 +105,46 @@ main {
     margin-right: 2rem;
 }
 
+
+
 /*------------ media queries---------- */
 
 @media (min-width: 481px) and (max-width: 1024px)  {
 
     body {
-        background-color: #D1D5DB;
+        background-color: #f6f9ff;
     }
 
     form {
-        display: flex;
-        flex-direction: row;
+        box-sizing: border-box;
+        grid-template-areas:    "input input input input"
+                                "select select button button"
+                                "hex-value hex-value hex-value hex-value"
+                                ". . . .";
         margin: 2rem .5rem;
-        flex-wrap: wrap;
-        align-items: center;
+        justify-items: center;
+        gap: 10px;
     }
 
     input, select, button {
         border-radius: 5px;
         border: 1px solid #D1D5DB;
         margin-bottom: 1.4rem;
+        width: 90%;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+    select, button {
+        height: 50px;
+    }
+
+    input, select {
+
+    }
+
+    input, button {
+
     }
 }
 
@@ -121,9 +152,25 @@ main {
 @media (min-width: 1025px) {
 
     main {
+        display: flex;
         flex-direction: row;
     }
 
+    form {
+
+        grid-template-areas:    "input select button hex-value"
+                                ". . . ."
+                                ". . . ."
+                                ". . . .";
+        justify-items: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    input, select, button, p {
+        width: 250px;
+        height: 50px;
+    }
     .color {
         height: 800px;
     }
@@ -131,6 +178,10 @@ main {
     .color-picker-container {
         max-width: 1500px;
         border: 1px solid #D1D5DB;
+    }
+
+    .color-name {
+        text-align: center;
     }
     /* main {
         display: grid;
