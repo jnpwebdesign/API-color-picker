@@ -5,10 +5,6 @@ const mode = document.getElementById("mode");
 const form = document.getElementById("get-color-scheme-form");
 const color = document.getElementById("color");
 
-if (color.value != "#000000") {
-    console.log(color.value);
-}
-
 form.addEventListener("submit", function(e){
     e.preventDefault();
     document.getElementById("hex-value").textContent = `Hex value: ${color.value}`

@@ -105,8 +105,6 @@ main {
     margin-right: 2rem;
 }
 
-
-
 /*------------ media queries---------- */
 
 @media (min-width: 481px) and (max-width: 1024px)  {
@@ -138,14 +136,6 @@ main {
     select, button {
         height: 50px;
     }
-
-    input, select {
-
-    }
-
-    input, button {
-
-    }
 }
 
 
@@ -157,7 +147,6 @@ main {
     }
 
     form {
-
         grid-template-areas:    "input select button hex-value"
                                 ". . . ."
                                 ". . . ."
@@ -183,13 +172,5 @@ main {
     .color-name {
         text-align: center;
     }
-    /* main {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows:  85% 15%;
-        grid-template-areas: 
-            "color0 color1 color2 color3 color4"
-           "color0name color1name color2name color3name color4name"
-    } */
 }
 
