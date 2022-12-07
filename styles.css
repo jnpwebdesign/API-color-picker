@@ -109,10 +109,6 @@ main {
 
 @media (min-width: 481px) and (max-width: 1024px)  {
 
-    body {
-        background-color: #f6f9ff;
-    }
-
     form {
         box-sizing: border-box;
         grid-template-areas:    "input input input input"
@@ -161,11 +157,12 @@ main {
         height: 50px;
     }
     .color {
-        height: 800px;
+        height: 650px;
     }
 
     .color-picker-container {
         max-width: 1500px;
+        margin-top: 50px;
         border: 1px solid #D1D5DB;
     }
 
