@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Scheme Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+<!-- font awesome -->    
+    <script src="https://kit.fontawesome.com/7d06af126b.js" crossorigin="anonymous"></script>
+<!-- link to css-->    
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <div class="color-picker-container">
+        <header>
+            <form id="get-color-scheme-form">
+                <input type="color">
+                <select id="mode" name="mode">
+                    <option value="monochrome">Monochrome</option>
+                    <option value="monochrome-dark">Monochrome Dark</option>
+                    <option value="monochrome-light">Monochrome Light</option>
+                    <option value="analogic">Analogic</option>
+                    <option value="complement">Complement</option>
+                    <option value="analogic-complement">Analogic-Complement</option>
+                    <option value="triad">Triad</option>
+                </select>
+                <button id="mode-btn">Get Color Scheme</button>
+            </form>
+        </header>
+        <main id="main-container">
+            <!-- <div class="color-container" id="color0"></div>
+            <div class="color-container" id="color1"></div>
+            <div class="color-container" id="color2"></div>
+            <div class="color-container" id="color3"></div>
+            <div class="color-container" id="color4"></div> -->
+            <!-- <img src="https://www.thecolorapi.com/scheme?format=svg&hex=0047AB&mode=monochrome&count=5"> -->
+        </main>
+    </div>
+<!-- link to JS file -->
+    <script src="javascript2.js"> </script>
+</body>
+</html>

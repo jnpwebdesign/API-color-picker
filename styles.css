@@ -1,0 +1,95 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+.color-picker-container {
+    max-width: 800px;
+    border: 1px solid #D1D5DB;
+}
+
+/*------------header---------*/
+
+form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2rem .5rem;
+}
+
+input, select, button {
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid #D1D5DB;
+}
+
+input {
+    width: 100px;
+    margin: 20px 10px;
+}
+
+select {
+    padding: 10px;
+    font-size: 1rem;
+}
+
+#get-color-scheme-btn {
+    color: black;
+    background-color: transparent;
+    padding: 10px 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+
+
+
+/* ---------------main--------------- */
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.color-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.color {
+    width: 100%;
+    height: 100px;
+}
+
+.color-name {
+    font-size: 1.5rem;
+    margin-top: .5rem;
+    margin-bottom: 1.5rem;
+    margin-right: 2rem;
+}
+
+/* main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:  85% 15%;
+    grid-template-areas: 
+        "color0 color1 color2 color3 color4"
+       "color0name color1name color2name color3name color4name"
+} */
+
+
+
+@media (min-width: 800px) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows:  85% 15%;
+        grid-template-areas: 
+            "color0 color1 color2 color3 color4"
+           "color0name color1name color2name color3name color4name"
+    }
+}
