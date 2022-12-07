@@ -6,43 +6,65 @@ html, body {
 }
 
 .color-picker-container {
-    max-width: 800px;
-    border: 1px solid #D1D5DB;
+    margin: 0 auto;
+    /* border: 1px solid #D1D5DB; */
 }
 
 /*------------header---------*/
 
 form {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    flex-direction: column;
     margin: 2rem .5rem;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 input, select, button {
-    height: 50px;
+    width: 80%;
     border-radius: 5px;
     border: 1px solid #D1D5DB;
+    margin-bottom: 1.4rem;
 }
 
 input {
-    width: 100px;
-    margin: 20px 10px;
+    height: 100px;
+}
+
+input:hover, select:hover, button:hover {
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+#hex-value {
+    font-size: 1.3rem;
+    margin: 0;
 }
 
 select {
+    height: 50px;
     padding: 10px;
     font-size: 1rem;
 }
 
-#get-color-scheme-btn {
+#mode-btn {
     color: black;
     background-color: transparent;
-    padding: 10px 5px;
+    padding: 10px 20px;
     font-size: 1rem;
     cursor: pointer;
+    font-weight: bold;
 }
 
+#mode-btn:hover {
+    background-color: #D1D5DB;
+}
+
+#mode-btn:active {
+    position: relative;
+    top: 1px;
+    bottom: 1px;
+}
 
 
 
@@ -72,24 +94,51 @@ main {
     margin-right: 2rem;
 }
 
-/* main {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows:  85% 15%;
-    grid-template-areas: 
-        "color0 color1 color2 color3 color4"
-       "color0name color1name color2name color3name color4name"
-} */
+/*------------ media queries---------- */
+
+@media (min-width: 481px) and (max-width: 1024px)  {
+
+    body {
+        background-color: #D1D5DB;
+    }
+
+    form {
+        display: flex;
+        flex-direction: row;
+        margin: 2rem .5rem;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    input, select, button {
+        border-radius: 5px;
+        border: 1px solid #D1D5DB;
+        margin-bottom: 1.4rem;
+    }
+}
 
 
+@media (min-width: 1025px) {
 
-@media (min-width: 800px) {
     main {
+        flex-direction: row;
+    }
+
+    .color {
+        height: 800px;
+    }
+
+    .color-picker-container {
+        max-width: 1500px;
+        border: 1px solid #D1D5DB;
+    }
+    /* main {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows:  85% 15%;
         grid-template-areas: 
             "color0 color1 color2 color3 color4"
            "color0name color1name color2name color3name color4name"
-    }
+    } */
 }
+

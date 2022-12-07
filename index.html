@@ -8,18 +8,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap" rel="stylesheet">
-
-<!-- font awesome -->    
-    <script src="https://kit.fontawesome.com/7d06af126b.js" crossorigin="anonymous"></script>
-<!-- link to css-->    
     <link rel="stylesheet" href="styles.css">
+    <!-- google fonts-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 
 </head>
 <body>
     <div class="color-picker-container">
         <header>
             <form id="get-color-scheme-form">
-                <input type="color">
+                <input type="color" id="color">
                 <select id="mode" name="mode">
                     <option value="monochrome">Monochrome</option>
                     <option value="monochrome-dark">Monochrome Dark</option>
@@ -28,20 +27,16 @@
                     <option value="complement">Complement</option>
                     <option value="analogic-complement">Analogic-Complement</option>
                     <option value="triad">Triad</option>
+                    <option value="quad">Quad</option>
                 </select>
-                <button id="mode-btn">Get Color Scheme</button>
+                <button type="submit" id="mode-btn">Get Color Scheme</button>
+                <p id="hex-value"></p>
             </form>
         </header>
         <main id="main-container">
-            <!-- <div class="color-container" id="color0"></div>
-            <div class="color-container" id="color1"></div>
-            <div class="color-container" id="color2"></div>
-            <div class="color-container" id="color3"></div>
-            <div class="color-container" id="color4"></div> -->
-            <!-- <img src="https://www.thecolorapi.com/scheme?format=svg&hex=0047AB&mode=monochrome&count=5"> -->
+            <!-- colors rendered here -->
         </main>
     </div>
-<!-- link to JS file -->
-    <script src="javascript2.js"> </script>
+    <script src="javascript.js"> </script>
 </body>
 </html>
