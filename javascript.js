@@ -5,9 +5,18 @@ const mode = document.getElementById("mode");
 const form = document.getElementById("get-color-scheme-form");
 const color = document.getElementById("color");
 
-form.addEventListener("submit", function(e){
+
+//hex color displays 
+color.addEventListener("change", function(e){
     e.preventDefault();
     document.getElementById("hex-value").textContent = `Hex value: ${color.value}`
+
+});
+
+
+//fetch color scheme from API 
+form.addEventListener("submit", function(e){
+    e.preventDefault();
     fetch(`https://www.thecolorapi.com/scheme?hex=${color.value.slice(1,7)}&mode=${mode.value}&count=5`)
             .then (response => response.json())
             .then (data => {
@@ -16,6 +25,7 @@ form.addEventListener("submit", function(e){
             });
 })
 
+//render colors onto page
 renderColors = colorData => {
     htmlFeed = "";
     for (let i = 0; i < colorData.length; i++){
