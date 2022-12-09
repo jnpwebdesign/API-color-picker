@@ -12,32 +12,68 @@ html, body {
 
 /*------------header---------*/
 
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+h1 {
+    margin-top: 40px;
+}
+
+h2 {
+    font-size: 1rem;
+    font-weight: 300;
+}
+h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 10px 0 10px 10px;
+    text-align: left;
+}
+h3:first-of-type {
+    margin-top: 30px;
+}
+
 form {
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(4, auto);
-    grid-template-rows: repeat(4, auto);
+    grid-template-rows: repeat(5, auto);
     grid-template-areas:    "input input input input"
+                            "hex-value hex-value hex-value hex-value"
+                            "step2 step2 step2 step2"
                             "select select select select"
-                            "button button button button"
-                            "hex-value hex-value hex-value hex-value";
+                            "button button button button"; */
+
     align-items: center;
     justify-items: center;
-    margin: 2rem .5rem;
-
-
+    margin: .5rem .5rem 2rem .5rem;
 }
 
 input, select, button {
     width: 80%;
     border-radius: 5px;
     border: 1px solid #D1D5DB;
-    margin-bottom: 1.4rem;
+
+}
+
+.step1-container, .step2-container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 input {
     height: 100px;
-    grid-area: input;
+    margin: 0 auto .5rem auto;
+    align-self: center;
 }
+
 
 input:hover, select:hover, button:hover {
     border: 1px solid black;
@@ -45,26 +81,30 @@ input:hover, select:hover, button:hover {
 }
 
 #hex-value {
-    font-size: 1.3rem;
+    font-size: 1rem;
     margin: 0;
-    grid-area: hex-value;
+    align-self: center;
 }
 
 select {
     height: 50px;
     padding: 10px;
     font-size: 1rem;
-    grid-area: select;
+    align-self: center;
+    margin-bottom: 1.4rem;
 }
 
 #mode-btn {
     color: black;
     background-color: transparent;
     padding: 10px 20px;
-    font-size: 1rem;
+    font-size: 1.3rem;
     cursor: pointer;
-    font-weight: bold;
-    grid-area: button;
+    font-weight: 900;
+    border: 2px solid black;
+    margin: 30px auto 1.4rem auto;
+    align-self: center;
+    display: block;
 }
 
 #mode-btn:hover {
@@ -77,7 +117,9 @@ select {
     bottom: 1px;
 }
 
-
+.hidden {
+    visibility: hidden;
+}
 
 /* ---------------main--------------- */
 
@@ -104,6 +146,22 @@ main {
     margin-bottom: 1.5rem;
     margin-right: 2rem;
 }
+
+i {
+    font-weight: 200;
+    z-index: -1;
+}
+
+.copy-btn {
+    border: none;
+    background-color: transparent;
+    width: 30px;
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem;
+    z-index: 10;
+}
+
 
 /*------------ media queries---------- */
 

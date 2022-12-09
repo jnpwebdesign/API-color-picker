@@ -12,25 +12,34 @@
         <!-- google fonts-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
         rel="stylesheet">
-
+        <!-- font awesome -->    
+    <script src="https://kit.fontawesome.com/7d06af126b.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <div class="color-picker-container">
             <header>
+                <h1>Color Scheme Generator</h1>
+                <h2>jnp web design</h2>
                 <form id="get-color-scheme-form">
-                    <input type="color" id="color">
-                    <select id="mode" name="mode">
-                        <option value="monochrome">Monochrome</option>
-                        <option value="monochrome-dark">Monochrome Dark</option>
-                        <option value="monochrome-light">Monochrome Light</option>
-                        <option value="analogic">Analogic</option>
-                        <option value="complement">Complement</option>
-                        <option value="analogic-complement">Analogic-Complement</option>
-                        <option value="triad">Triad</option>
-                        <option value="quad">Quad</option>
-                    </select>
-                    <button type="submit" id="mode-btn">Get Color Scheme</button>
-                    <p id="hex-value"></p>
+                    <div class="step1-container">
+                        <h3>Step 1. Choose a Color:</h3>
+                        <input type="color" id="color">
+                        <p id="hex-value"></p>
+                    </div>
+                    <div class="step2-container hidden" id="step2-container">
+                        <h3>Step 2. Choose a Scheme:</h3>
+                        <select id="mode" name="mode">
+                            <option value="monochrome">Monochrome</option>
+                            <option value="monochrome-dark">Monochrome Dark</option>
+                            <option value="monochrome-light">Monochrome Light</option>
+                            <option value="analogic">Analogic</option>
+                            <option value="complement">Complement</option>
+                            <option value="analogic-complement">Analogic-Complement</option>
+                            <option value="triad">Triad</option>
+                            <option value="quad">Quad</option>
+                        </select>
+                    </div>
+                    <button type="submit" id="mode-btn" class="hidden">Get Color Scheme</button>
                 </form>
             </header>
             <main id="main-container">
