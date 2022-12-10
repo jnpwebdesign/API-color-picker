@@ -176,18 +176,17 @@ i {
 
     h1 {
         margin-bottom: 0;
+        font-size: 2.8rem;
     }
 
+    h2 {
+        font-size: 1.8rem;
+    }
     h3 {
         margin-left: 30px;
     }
     form {
-        /* box-sizing: border-box;
-        grid-template-areas:    "input input input input"
-                                "select select button button"
-                                "hex-value hex-value hex-value hex-value"
-                                ". . . ."; */
-        margin: 2rem .5rem;
+        margin: 1rem .5rem 2rem .5rem;
         justify-items: center;
         gap: 10px;
     }
@@ -210,38 +209,72 @@ i {
 
 
 @media (min-width: 1025px) {
+    
+    .color-picker-container {
+        max-width: 1000px;
+        margin-top: 30px;
+        border: 1px solid #D1D5DB;
+    }
+    h1 {
+        margin-bottom: 0;
+        font-size: 2.8rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+    h3 {
+        margin-left: 30px;
+        margin-right: 20px;
+    }
+    
+
+    .step1-container, .step2-container {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    form {
+        /* grid-template-areas:    "input select button hex-value"
+                                ". . . ."
+                                ". . . ."
+                                ". . . ."; */
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        gap: 10px;
+    }
+
+    
+    input, select, button, p {
+        width: 280px;
+        height: 70px;
+    }
+
+    #hex-value {
+        margin-left: 10px;
+    }
+    .color {
+        height: 650px;
+    }
+
+    #mode-btn {
+        height: 90px;
+        margin: 0 10px 0 10px;
+    }
 
     main {
         display: flex;
         flex-direction: row;
     }
 
-    form {
-        grid-template-areas:    "input select button hex-value"
-                                ". . . ."
-                                ". . . ."
-                                ". . . .";
-        justify-items: center;
-        align-items: center;
-        gap: 10px;
-    }
-
-    input, select, button, p {
-        width: 250px;
-        height: 50px;
-    }
-    .color {
-        height: 650px;
-    }
-
-    .color-picker-container {
-        max-width: 1500px;
-        margin-top: 50px;
-        border: 1px solid #D1D5DB;
-    }
-
     .color-name {
         text-align: center;
+    }
+
+    .hidden {
+        visibility: visible;
     }
 }
 
